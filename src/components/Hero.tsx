@@ -1,21 +1,16 @@
-import { Container, useTheme } from '@nextui-org/react'
+import { useTheme } from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
+import Box from './Box'
 
 const Hero = () => {
-  const theme = useTheme()
+  const { theme } = useTheme()
 
   return (
-    <Container
-      fluid
-      responsive={false}
-      display="flex"
-      justify="center"
-      alignItems="center"
+    <Box
       css={{
         position: 'relative',
         aspectRatio: 'auto',
-        p: 0,
       }}
     >
       <Image
@@ -24,10 +19,10 @@ const Hero = () => {
         src={'/ieti-hero.jpeg'}
         alt={'hero'}
         style={{
-          borderRadius: theme.theme?.radii.base.value,
+          borderRadius: theme?.radii.base.value,
         }}
       />
-    </Container>
+    </Box>
   )
 }
 
