@@ -14,6 +14,7 @@ const Hero = () => {
       alignItems="center"
       css={{
         position: 'relative',
+        aspectRatio: 'auto',
         p: 0,
       }}
     >
